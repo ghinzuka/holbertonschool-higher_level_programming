@@ -2,5 +2,5 @@
 def remove_char_at(str, n):
     strcopy = ""
     if n < 0 or n > len(str):
-        return(str)
-    return str[:n] + str[n + 1:]
+        return str
+    return str[0:n] + str[n + 1:]
