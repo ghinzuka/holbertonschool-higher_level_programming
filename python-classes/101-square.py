@@ -66,21 +66,21 @@ class Square:
         else:
             print()
 
-    def my_print_string(self):
-        """formats returnable string like my_print"""
-        square_string = ""
+    def __string(self):
+        """return string like my_print"""
+        string = ""
         if self.__size > 0:
             for y in range(self.__position[1]):
-                square_string = square_string + "\n"
-            for row in range(self.__size):
+                string = string + "\n"
+            for i in range(self.__size):
                 for x in range(self.__position[0]):
-                    square_string = square_string + " "
-                for column in range(self.__size):
-                    square_string = square_string + "#"
-                if row is not (self.__size - 1):
-                    square_string = square_string + "\n"
-        return square_string
+                    string = string + " "
+                for j in range(self.__size):
+                    string = string + "#"
+                if i is not (self.__size - 1):
+                    string = string + "\n"
+        return string
 
     def __repr__(self):
-        """returns square representation as a string"""
-        return (self.my_print_string())
+        """returns square as a string using the repr attribute"""
+        return (self.__string())
