@@ -48,19 +48,20 @@ class Square:
 
     def area(self):
         """return the calculated area of the square"""
-        return self.__size * self.__size
+        return(self.__size * self.__size)
 
     def my_print(self):
         """ print in stdout the square with the # char
         or nothing in the position
         """
-        for x in range(self.__position[1]):
-            print()
-        for i in range(self.__size):
-            for y in range(self.__position[0]):
-                print(" ", end="")
-            for j in range(self.__size):
-                print('#', end="")
-            print()
-        if self.__size == 0:
+        if self.__size > 0:
+            for x in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                for y in range(self.__position[0]):
+                    print(" ", end="")
+                for j in range(self.__size):
+                    print('#', end="")
+                print()
+        else:
             print()
