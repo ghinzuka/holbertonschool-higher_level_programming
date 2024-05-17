@@ -12,7 +12,7 @@ class Square:
         """
         self.__size = size
         self.__position = position
-        
+
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
@@ -36,13 +36,15 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    @property    
+
+    @property
     def position(self):
         """retrieve position attribute"""
         return self.__position
+
     @position.setter
     def position(self, value):
-        
+
         """set the value of the position in private
         args : value : the position
         raise : type error if val is not int or value is not tuple
@@ -55,7 +57,6 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-        
 
     def area(self):
         """
@@ -69,7 +70,7 @@ class Square:
         or nothing in the position
         """
         for x in range(self.__position[1]):
-            print ()
+            print()
         for i in range(self.__size):
             for y in range(self.__position[0]):
                 print("", end=" ")
