@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Create a class with a private instance with private size attribute in """
+"""Create a class with a private instance with private size attribute
+and a position to print a square shape of # or space at position"""
 
 
 class Square:
@@ -7,11 +8,11 @@ class Square:
     and creat a public instance for area
     """
     def __init__(self, size=0, position=(0, 0)):
-        """give the size to the __size attribute
-        and position 0 to __position
+        """give the size to the size attribute
+        and position 0 to position
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -39,7 +40,6 @@ class Square:
 
     @position.setter
     def position(self, value):
-
         """set the value of the position in private
         args : value : the position
         raise : type error if val is not int or value is not tuple
