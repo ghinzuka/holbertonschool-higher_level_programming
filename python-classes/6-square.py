@@ -5,21 +5,18 @@ and a position to print a square shape of # or space at position"""
 
 class Square:
     """Initializes a private method to give size and raise errors
-    and creat a public instance for area
-    """
+    and creat a public instance for area"""
+
     def __init__(self, size=0, position=(0, 0)):
-        """give the size to the size attribute
-        and position 0 to position
-        """
+        """give the size to the size attributeand position 0 to position"""
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """retrieve the size"""
-        """ Returns: the lenght of the square"""
-
-        return (self.__size)
+        """retrieve the size
+        Returns: the lenght of the square"""
+        return self.__size
 
     @size.setter
     def size(self, value):
@@ -56,7 +53,7 @@ class Square:
         return the calculated area of the
         square using the predefine self.__size initialize
         """
-        return (self.__size * self.__size)
+        return self.__size * self.__size
 
     def my_print(self):
         """ print in stdout the square with the # char
