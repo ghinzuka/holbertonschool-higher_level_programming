@@ -20,10 +20,8 @@ class Square:
 
     @size.setter
     def size(self, value):
-
-        """ set the value of the size"""
-        """ args: Val: the lenght of the square"""
-
+        """ set the value of the size
+        args: Value: the lenght of the square"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -49,10 +47,7 @@ class Square:
             self.__position = value
 
     def area(self):
-        """
-        return the calculated area of the
-        square using the predefine self.__size initialize
-        """
+        """return the calculated area of the square"""
         return self.__size * self.__size
 
     def my_print(self):
