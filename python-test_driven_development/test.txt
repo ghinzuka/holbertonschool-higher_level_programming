@@ -1,63 +1,60 @@
 Trying:
-    say_my_name = __import__('3-say_my_name').say_my_name
+    print_square = __import__('4-print_square').print_square
 Expecting nothing
 ok
 Trying:
-    say_my_name("Pouquerou", "Baptiste")
+    print_square(5)
 Expecting:
-    My name is Pouquerou Baptiste
+    #####
+    #####
+    #####
+    #####
+    #####
 ok
 Trying:
-    say_my_name("Pouquerou")
+    print_square(True)
 Expecting:
-    My name is Pouquerou 
+    #
 ok
 Trying:
-    say_my_name("", "")
-Expecting:
-    My name is  
+    print_square(False)
+Expecting nothing
 ok
 Trying:
-    say_my_name(12, "Baptiste")
-Expecting:
-    Traceback (most recent call last):
-    TypeError: first_name must be a string
-ok
-Trying:
-    say_my_name("Pouquerou", 123)
+    print_square(None)
 Expecting:
     Traceback (most recent call last):
-    TypeError: last_name must be a string
+    TypeError: size must be an integer
 ok
 Trying:
-    say_my_name(True, True)
+    print_square(3.5)
 Expecting:
     Traceback (most recent call last):
-    TypeError: first_name must be a string
+    TypeError: size must be an integer
 ok
 Trying:
-    say_my_name(None, "Baptiste")
+    print_square()
 Expecting:
     Traceback (most recent call last):
-    TypeError: first_name must be a string
+    TypeError: print_square() missing 1 required positional argument: 'size'
 ok
 Trying:
-    say_my_name()
+    print_square(5, 5, 5, 5)
 Expecting nothing
 **********************************************************************
-File "./tests/3-say_my_name.txt", line 52, in 3-say_my_name.txt
+File "./tests/4-print_square.txt", line 54, in 4-print_square.txt
 Failed example:
-    say_my_name()
+    print_square(5, 5, 5, 5)
 Exception raised:
     Traceback (most recent call last):
       File "/usr/lib/python3.10/doctest.py", line 1350, in __run
         exec(compile(example.source, filename, "single",
-      File "<doctest 3-say_my_name.txt[8]>", line 1, in <module>
-        say_my_name()
-    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+      File "<doctest 4-print_square.txt[7]>", line 1, in <module>
+        print_square(5, 5, 5, 5)
+    TypeError: print_square() takes 1 positional argument but 4 were given
 **********************************************************************
 1 items had failures:
-   1 of   9 in 3-say_my_name.txt
-9 tests in 1 items.
-8 passed and 1 failed.
+   1 of   8 in 4-print_square.txt
+8 tests in 1 items.
+7 passed and 1 failed.
 ***Test Failed*** 1 failures.

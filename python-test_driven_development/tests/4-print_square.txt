@@ -1,0 +1,64 @@
+============================
+doctest for 4-print_square.py
+============================
+``print_square()`` function that print a suare shape with # character
+
+>>> print_square = __import__('4-print_square').print_square
+
+SUCCESSFUL TEST CONDITIONS
+==========================
+
+testing printing a square of int size
+::
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+testing with bolean (1)
+::
+>>> print_square(True)
+#
+
+testing with bolean (0)
+::
+>>> print_square(False)
+
+
+
+TEST WITH INVALID INPUT
+=========================
+
+testing with none
+::
+>>> print_square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+testing with a float
+::
+>>> print_square(3.5)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+testing with no argument
+::
+>>> print_square()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+testing with too much argument
+::
+>>> print_square(5, 5, 5, 5)
+Traceback (most recent call last):
+TypeError: print_square() takes 1 positional argument but 4 were given
+
+testing with negative size argument
+::
+>>> print_square(-4)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+
