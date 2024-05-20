@@ -70,3 +70,8 @@ testing how add_integer function handles if 1 argument is boolean
 >>> add_integer(True, 1)
 Traceback (most recent call last):
 TypeError: a must be an integer
+
+>>> add_integer(0, float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
