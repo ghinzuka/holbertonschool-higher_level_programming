@@ -1,0 +1,64 @@
+============================
+doctest for 0-add_integer.py
+============================
+``add_integer()`` returns the sum two integer
+
+>>> add_integer = __import__('0-add_integer').add_integer
+============================
+# test with valid inputs
+
+test for two integer
+::
+>>> add_integer(1, 2)
+3
+
+test for two float
+::
+>>> add_integer(1.5, 2.5)
+3
+
+test for only A as int leave second to default
+::
+>>> add_integer(1)
+99
+
+test for A as float B as int
+::
+>>> add_integer(100.3, -2)
+98
+
+test for A and B two negativ int
+::
+>>> add_integer(-1, -2)
+-3
+
+test for two 0 as integers
+::
+>>> add_integer(0, 0)
+0
+
+test for a negative and a postiv
+::
+>>> add_integer(-1, 1)
+0
+
+=========================
+
+# Test with invalid inputs
+
+>>> add_integer("a", 1)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(1, "b")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+>>> add_integer(None, 1)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(1, [2])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
