@@ -4,7 +4,7 @@ doctest for 0-add_integer.py
 ``add_integer()`` returns the sum two integer
 
 >>> add_integer = __import__('0-add_integer').add_integer
-============================
+
 # test with valid inputs
 
 test for two integer

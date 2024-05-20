@@ -1,0 +1,82 @@
+Trying:
+    add_integer = __import__('0-add_integer').add_integer
+Expecting:
+    ============================
+    # test with valid inputs
+**********************************************************************
+File "./tests/0-add_integer.txt", line 6, in 0-add_integer.txt
+Failed example:
+    add_integer = __import__('0-add_integer').add_integer
+Expected:
+    ============================
+    # test with valid inputs
+Got nothing
+Trying:
+    add_integer(1, 2)
+Expecting:
+    3
+ok
+Trying:
+    add_integer(1.5, 2.5)
+Expecting:
+    3
+ok
+Trying:
+    add_integer(1)
+Expecting:
+    99
+ok
+Trying:
+    add_integer(100.3, -2)
+Expecting:
+    98
+ok
+Trying:
+    add_integer(-1, -2)
+Expecting:
+    -3
+ok
+Trying:
+    add_integer(0, 0)
+Expecting:
+    0
+ok
+Trying:
+    add_integer(-1, 1)
+Expecting:
+    0
+ok
+Trying:
+    add_integer("a", 1)
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+ok
+Trying:
+    add_integer(1, "b")
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+ok
+Trying:
+    add_integer(None, 1)
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+ok
+Trying:
+    add_integer(1, [2])
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+ok
+**********************************************************************
+1 items had failures:
+   1 of  12 in 0-add_integer.txt
+12 tests in 1 items.
+11 passed and 1 failed.
+***Test Failed*** 1 failures.
