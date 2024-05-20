@@ -33,6 +33,21 @@ testing 1 float and default value int (98)
 >>> add_integer(27.1234)
 125
 
+testing with big number
+::
+>>> add_integer(4589, 32494)
+37083
+
+testing with negativ float number
+::
+>>> add_integer(-5.23, -6.23)
+-11
+
+testing with negativ int number
+::
+>>> add_integer(-3, -5)
+-8
+
 TEST WITH INVALID INPUT
 =========================
 
