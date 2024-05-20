@@ -46,3 +46,68 @@ Sin aliud quid voles, postea.
 Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+testin with blank space at the start of the text
+::
+>>> text_indentation("""   Hello:    world?""")
+Hello:
+<BLANKLINE>
+world?
+<BLANKLINE>
+
+testint with blank line at the end of text
+::
+>>> text_indentation("""Hello:    world?    """)
+Hello:
+<BLANKLINE>
+world?
+<BLANKLINE>
+
+testing with only special characters
+::
+>>> text_indentation(""":?.""")
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+
+testing with no special character
+::
+>>> text_indentation("""hello world there is no special character""")
+hello world there is no special character
+
+=============
+TEST WITH FAILURE
+=============
+
+testing None 
+::
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+testing too much argument
+::
+>>> text_indentation("blabla", "blibli", "bloblo")
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 3 were given
+
+testing with bolean
+::
+>>> text_indentation(True)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+testing a dictionnary
+::
+>>> text_indentation({1, 2, 3, 4})
+Traceback (most recent call last):
+TypeError: text must be a string
+
+testing with nothing
+::
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'

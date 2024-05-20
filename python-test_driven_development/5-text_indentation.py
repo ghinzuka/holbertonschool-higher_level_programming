@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""function that print a text with newline after threee differents marker ":" "?" "."
+"""function that print a text
+with newline after threee differents marker ":" "?" "."
 avoid to print char if the sentence start with a space
 raise: Type error if text is not a string"""
 
@@ -13,6 +14,9 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     char = ""
     for i in text:
+        if i == " " and i == text[0] and char == "":
+            char = "\n"
+            continue
         if i == " " and char == "\n":
             continue
         if i in [".", "?", ":"]:
@@ -21,4 +25,4 @@ def text_indentation(text):
             char = "\n"
         else:
             print(i, end="")
-            char = ""
+            char = i
