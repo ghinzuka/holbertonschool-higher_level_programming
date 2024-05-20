@@ -3,12 +3,13 @@ doctest for 0-add_integer.py
 ============================
 ``add_integer()`` returns the sum of its arguments
 
+>>> add_integer = __import__('0-add_integer').add_integer
+
 SUCCESSFUL TEST CONDITIONS
 ==========================
 
 testing addition of two integers, both single digit
 ::
->>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(1, 2)
 3
 
