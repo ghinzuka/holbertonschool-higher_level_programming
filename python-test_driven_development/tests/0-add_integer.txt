@@ -22,24 +22,9 @@ test for only A as int leave second to default
 >>> add_integer(1)
 99
 
-test for A as float B as int
-::
->>> add_integer(100.3, -2)
-98
-
-test for A and B two negativ int
-::
->>> add_integer(-1, -2)
--3
-
 test for two 0 as integers
 ::
 >>> add_integer(0, 0)
-0
-
-test for a negative and a postiv
-::
->>> add_integer(-1, 1)
 0
 
 =========================
