@@ -81,15 +81,21 @@ testing with 0 as a Div
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
 
-testing how function handles list of None
+testing with list of None
 ::
 >>> matrix_divided([None], 2)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-testing how function handles None argument
+testing with None argument
 ::
 >>> matrix_divided(None, None)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+testing with dictionary instead of list as matrix argument
+::
+>>> matrix_divided({9, 8, 7}, 2)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
