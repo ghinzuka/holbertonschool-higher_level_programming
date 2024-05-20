@@ -47,6 +47,12 @@ testing with b as a string
 Traceback (most recent call last):
 TypeError: b must be an integer
 
+testing how add_integer function handles no arguments
+::
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
 testng with None as A
 ::
 >>> add_integer(None, 1)
@@ -74,4 +80,16 @@ TypeError: a must be an integer
 >>> add_integer(0, float('nan'))
 Traceback (most recent call last):
 ...
+ValueError: cannot convert float NaN to integer
+
+testing how add_integer function handles more than 2 arguments
+::
+>>> add_integer(1, 2, 3)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+testing how add_integer function handles float NaN argument
+::
+>>> add_integer(float("NaN"), 1)
+Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
