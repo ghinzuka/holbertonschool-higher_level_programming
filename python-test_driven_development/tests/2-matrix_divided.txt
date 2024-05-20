@@ -87,4 +87,10 @@ testing how function handles list of None
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+testing how function handles None argument
+::
+>>> matrix_divided(None, None)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 
