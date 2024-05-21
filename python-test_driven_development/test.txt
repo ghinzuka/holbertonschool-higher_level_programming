@@ -1,60 +1,115 @@
 Trying:
-    print_square = __import__('4-print_square').print_square
+    add_integer = __import__('0-add_integer').add_integer
 Expecting nothing
 ok
 Trying:
-    print_square(5)
+    add_integer(1, 2)
 Expecting:
-    #####
-    #####
-    #####
-    #####
-    #####
+    3
 ok
 Trying:
-    print_square(True)
+    add_integer(1.5, 2.5)
 Expecting:
-    #
+    3
 ok
 Trying:
-    print_square(False)
-Expecting nothing
+    add_integer(1)
+Expecting:
+    99
 ok
 Trying:
-    print_square(None)
+    add_integer(0, 0)
+Expecting:
+    0
+ok
+Trying:
+    add_integer(27.1234)
+Expecting:
+    125
+ok
+Trying:
+    add_integer(4589, 32494)
+Expecting:
+    37083
+ok
+Trying:
+    add_integer(-5.23, -6.23)
+Expecting:
+    -11
+ok
+Trying:
+    add_integer(-3, -5)
+Expecting:
+    -8
+ok
+Trying:
+    add_integer("a", 1)
 Expecting:
     Traceback (most recent call last):
-    TypeError: size must be an integer
+    TypeError: a must be an integer
 ok
 Trying:
-    print_square(3.5)
+    add_integer(1, "b")
 Expecting:
     Traceback (most recent call last):
-    TypeError: size must be an integer
+    TypeError: b must be an integer
 ok
 Trying:
-    print_square()
+    add_integer()
 Expecting:
     Traceback (most recent call last):
-    TypeError: print_square() missing 1 required positional argument: 'size'
+    TypeError: add_integer() missing 1 required positional argument: 'a'
 ok
 Trying:
-    print_square(5, 5, 5, 5)
-Expecting nothing
-**********************************************************************
-File "./tests/4-print_square.txt", line 54, in 4-print_square.txt
-Failed example:
-    print_square(5, 5, 5, 5)
-Exception raised:
+    add_integer(None, 1)
+Expecting:
     Traceback (most recent call last):
-      File "/usr/lib/python3.10/doctest.py", line 1350, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 4-print_square.txt[7]>", line 1, in <module>
-        print_square(5, 5, 5, 5)
-    TypeError: print_square() takes 1 positional argument but 4 were given
-**********************************************************************
-1 items had failures:
-   1 of   8 in 4-print_square.txt
-8 tests in 1 items.
-7 passed and 1 failed.
-***Test Failed*** 1 failures.
+    TypeError: a must be an integer
+ok
+Trying:
+    add_integer(1, [2])
+Expecting:
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+ok
+Trying:
+    add_integer("5", "3")
+Expecting:
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+ok
+Trying:
+    add_integer(True, 1)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+ok
+Trying:
+    add_integer(0, float('nan'))
+Expecting:
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+ok
+Trying:
+    add_integer(1, 2, 3)
+Expecting:
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+ok
+Trying:
+    add_integer(float("NaN"), 1)
+Expecting:
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+ok
+Trying:
+    add_integer(float('inf'), 0)
+Expecting:
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+ok
+1 items passed all tests:
+  20 tests in 0-add_integer.txt
+20 tests in 1 items.
+20 passed and 0 failed.
+Test passed.
