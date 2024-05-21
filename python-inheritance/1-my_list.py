@@ -7,4 +7,5 @@ class MyList(list):
     method print sorted : print in ascending order the list inherated"""
 
     def print_sorted(self):
-        print (sorted(self))
+        res = sorted(self)
+        print(res)

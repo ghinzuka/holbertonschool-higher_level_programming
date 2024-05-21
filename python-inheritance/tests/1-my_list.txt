@@ -1,0 +1,82 @@
+==============================
+doctest for 1-my_list.py
+==============================
+
+>>> MyList = __import__('1-my_list').MyList
+
+TEST WITH SUCCESS
+===============
+
+testing the main doc
+::
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+testing with none in my MyList
+::
+>>> my_list = MyList(none)
+Traceback (most recent call last):
+NameError: name 'none' is not defined
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+testing with an empty MyList
+::
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
+[]
+
+testing with string instead of int passed
+::
+>>> my_list = MyList()
+>>> my_list.append("blabla")
+>>> my_list.append("blibli")
+>>> my_list.append("bleble")
+>>> my_list.append("bloblo")
+>>> print(my_list)
+['blabla', 'blibli', 'bleble', 'bloblo']
+>>> my_list.print_sorted()
+['blabla', 'bleble', 'blibli', 'bloblo']
+>>> print(my_list)
+['blabla', 'blibli', 'bleble', 'bloblo']
+
+testing with negative int
+::
+>>> my_list = MyList()
+>>> my_list.append(-5)
+>>> my_list.append(-10)
+>>> my_list.append(-20)
+>>> my_list.append(-1)
+>>> print(my_list)
+[-5, -10, -20, -1]
+>>> my_list.print_sorted()
+[-20, -10, -5, -1]
+>>> print(my_list)
+[-5, -10, -20, -1]
+
+testing with a dictionnary passed as argument
+::
+>>> my_list = MyList()
+>>> my_list.append({1, 10, 3})
+>>> my_list.append({8, 5, 2})
+>>> my_list.append({4, 6, 9})
+>>> print(my_list)
+[{1, 10, 3}, {8, 2, 5}, {9, 4, 6}]
+>>> my_list.print_sorted()
+[{1, 10, 3}, {8, 2, 5}, {9, 4, 6}]
