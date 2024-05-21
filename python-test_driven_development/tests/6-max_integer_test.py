@@ -14,3 +14,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 2, 5]), 5)
         self.assertEqual(max_integer([-2, -4, -5, -6]), -2)
         self.assertEqual(max_integer([2]), 2)
+        self.assertEqual(max_integer([]), None)
+
+    def test_error(self):
+        self.assertRaises(Exception, max_integer, ["baptiste", 5.325, {1, 2}])
