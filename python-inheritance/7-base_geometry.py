@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""class with a method that raise and excpetion"""
+"""class with a method that raise and excpetion
+and raise error if value is not good"""
 
 
 class BaseGeometry():

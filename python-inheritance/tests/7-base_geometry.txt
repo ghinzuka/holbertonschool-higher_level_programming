@@ -5,97 +5,113 @@ doctest for 7-base_geometry.py
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
-TEST WITH SUCCESS
+TEST CONDITIONS
 ===============
 
-testing main test
+testing instantiation
 ::
->>> print(dir(bg))
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'area', 'integer_validator']
+>>> print(bg.__dict__)
+{}
 
-testing from main 6
+testing area method
 ::
 >>> try:
-...     print(bg.area())
-... except Exception as e:
-...     print(e)
+...     bg.area()
+... except Exception as err:
+...     print(err)
 area() is not implemented
 
-testing from main 7
+testing integer_validator method
 ::
 >>> try:
-...     bg.integer_validator("name", "John")
-... except Exception as e:
-...     print(e)
-name must be an integer
+...     bg.integer_validator("x", 1)
+... except Exception as err:
+...     print(err)
 
-testing with 0
+testing integer_validator method with TypeError float
 ::
 >>> try:
-...     bg.integer_validator("age", 0)
-... except Exception as e:
-...     print(e)
-age must be greater than 0
+...     bg.integer_validator("x", 3.14159)
+... except Exception as err:
+...     print(err)
+x must be an integer
 
-testing with a negativ number
+testing integer_validator method with TypeError string
 ::
 >>> try:
-...     bg.integer_validator("distance", -4)
-... except Exception as e:
-...     print(e)
-distance must be greater than 0
+...     bg.integer_validator("x", "52")
+... except Exception as err:
+...     print(err)
+x must be an integer
 
-testing validator with a float
+testing integer_validator method with TypeError tuple
 ::
 >>> try:
-...     bg.integer_validator("baptiste", 3.14)
-... except Exception as e:
-...     print(e)
-baptiste must be an integer
+...     bg.integer_validator("x", (0,))
+... except Exception as err:
+...     print(err)
+x must be an integer
 
-testing validator with a dictionnary
+testing integer_validator method with TypeError list
 ::
 >>> try:
-...     bg.integer_validator("baptiste", {cestmoi, cestlui})
-... except Exception as e:
-...     print(e)
-name 'cestmoi' is not defined
+...     bg.integer_validator("x", [7])
+... except Exception as err:
+...     print(err)
+x must be an integer
 
-testing validator with a tulpe
+testing integer_validator method with TypeError boolean
 ::
 >>> try:
-...     bg.integer_validator("baptiste", (0, 1, 2))
-... except Exception as e:
-...     print(e)
-baptiste must be an integer
+...     bg.integer_validator("x", True)
+... except Exception as err:
+...     print(err)
+x must be an integer
 
-testing validator with a none as name and value
+testing integer_validator method with TypeError set
 ::
 >>> try:
-...     bg.integer_validator(None, None)
-... except Exception as e:
-...     print(e)
-None must be an integer
+...     bg.integer_validator("x", {8})
+... except Exception as err:
+...     print(err)
+x must be an integer
 
-testing validator with 3 arguments
+testing integer_validator method with ValueError negative
 ::
 >>> try:
-...     bg.integer_validator("baptiste", "encore", "un", "baptiste")
-... except Exception as e:
-...     print(e)
-BaseGeometry.integer_validator() takes 3 positional arguments but 5 were given
+...     bg.integer_validator("x", -2)
+... except Exception as err:
+...     print(err)
+x must be greater than 0
 
-testing validator with no arguments
+testing integer_validator method with ValueError zero
+::
+>>> try:
+...     bg.integer_validator("x", 0)
+... except Exception as err:
+...     print(err)
+x must be greater than 0
+
+testing integer_validator method with no arguments
 ::
 >>> try:
 ...     bg.integer_validator()
-... except Exception as e:
-...     print(e)
+... except Exception as err:
+...     print(err)
 BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-testing with a succed
+testing integer_validator method with only one argument
 ::
 >>> try:
-...     bg.integer_validator("baptiste", 32)
-... except Exception as e:
-...     print(e)
+...     bg.integer_validator("x")
+... except Exception as err:
+...     print(err)
+BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+testing integer_validator with None
+::
+>>> try:
+...     bg.integer_validator(None, None)
+... except Exception as err:
+...     print(err)
+None must be an integer
