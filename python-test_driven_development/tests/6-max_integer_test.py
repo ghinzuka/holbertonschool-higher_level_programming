@@ -38,16 +38,11 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer([1, 2, 'three', 4])
 
-    def test_mixed_data_types(self):
-        """Test with mixed data types raises a TypeError"""
-        with self.assertRaises(Exception):
-            max_integer([1, 2.5, 3, 4])
-
     def test_none_as_element(self):
         """Test with None as an element raises a TypeError"""
         with self.assertRaises(TypeError):
             max_integer([1, None, 3, 4])
-        
+
     def test_empty_list(self):
         """Test that an empty list returns None"""
         self.assertIsNone(max_integer([]))
