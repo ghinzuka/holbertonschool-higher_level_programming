@@ -47,3 +47,9 @@ testing validator with a tulpe
 >>> bg.integer_validator("baptiste", (0, 1, 2))
 Traceback (most recent call last):
 TypeError: baptiste must be an integer
+
+testing validator with a none as name and value
+::
+>>> bg.integer_validator(None, None)
+Traceback (most recent call last):
+TypeError: None must be an integer
