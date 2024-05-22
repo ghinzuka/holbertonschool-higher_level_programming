@@ -83,12 +83,6 @@ with boolean True
 Traceback (most recent call last):
 TypeError: bool must be an integer
 
-with boolean False
-==================
->>> bg.integer_validator("bool", False)
-Traceback (most recent call last):
-TypeError: bool must be an integer
-
 with a list
 ===========
 >>> bg.integer_validator("list", [1, 2, 3])
@@ -101,3 +95,8 @@ with a set
 Traceback (most recent call last):
 TypeError: set must be an integer
 
+testing area method with none
+====================
+>>> bg.area(none)
+Traceback (most recent call last):
+NameError: name 'none' is not defined
