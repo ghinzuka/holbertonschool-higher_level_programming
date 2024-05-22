@@ -95,8 +95,18 @@ with a set
 Traceback (most recent call last):
 TypeError: set must be an integer
 
-testing area method with none
-====================
->>> bg.area(none)
+with a float in string format
+=============================
+>>> bg.integer_validator("float_string", "3.14")
 Traceback (most recent call last):
-NameError: name 'none' is not defined
+TypeError: float_string must be an integer
+
+with a boolean in string format
+===============================
+>>> bg.integer_validator("boolean_string", "True")
+Traceback (most recent call last):
+TypeError: boolean_string must be an integer
+
+with None as name
+=================
+>>> bg.integer_validator(None, 5)
