@@ -8,6 +8,10 @@ doctest for 7-base_geometry.py
 TEST WITH SUCCESS
 ===============
 
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("width", 89)
+
 testing from main 7
 ::
 >>> bg.integer_validator("name", "John")
