@@ -2,27 +2,14 @@
 """class with a method that raise and excpetion
 and raise error if value is not good"""
 
-
-class BaseGeometry:
-    """class with a method to raise area"""
-
-    def area(self):
-        """ raises an Exception with the message """
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """method that raise errors and return the value as name"""
-
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """class inherated from base geometry"""
 
     def __init__(self, width, height):
+        """give height and width if integer validator is true"""
         self.integer_validator("width", width)
         self.__width = width
         self.integer_validator("height", height)
