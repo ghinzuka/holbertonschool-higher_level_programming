@@ -8,105 +8,124 @@ doctest for 7-base_geometry.py
 TEST WITH SUCCESS
 =================
 
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("width", 89)
 
 testing from main 7
 ===================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
 
 testing with 0
 ===================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
 
 testing with a negative number
 ===============================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
 testing with a float
 =====================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("baptiste", 3.14)
 Traceback (most recent call last):
 TypeError: baptiste must be an integer
 
 testing with a dictionary
 ==========================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("baptiste", {"cestmoi": "cestlui"})
 Traceback (most recent call last):
 TypeError: baptiste must be an integer
 
 testing with a tuple
 =====================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("baptiste", (0, 1, 2))
 Traceback (most recent call last):
 TypeError: baptiste must be an integer
 
 testing with None as name and value
 ====================================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator(None, None)
 Traceback (most recent call last):
 TypeError: None must be an integer
 
 testing area method
 ====================
+>>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
 
 with infinite integer
 ======================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("infnumber", float('inf'))
 Traceback (most recent call last):
 TypeError: infnumber must be an integer
 
 with negative infinity
 ======================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("neg_inf", float('-inf'))
 Traceback (most recent call last):
 TypeError: neg_inf must be an integer
 
 with NaN
 ========
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("nan", float('nan'))
 Traceback (most recent call last):
 TypeError: nan must be an integer
 
 with boolean True
 =================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("bool", True)
 Traceback (most recent call last):
 TypeError: bool must be an integer
 
 with a list
 ===========
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("list", [1, 2, 3])
 Traceback (most recent call last):
 TypeError: list must be an integer
 
 with a set
 ==========
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("set", {1, 2, 3})
 Traceback (most recent call last):
 TypeError: set must be an integer
 
 with a float in string format
 =============================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("float_string", "3.14")
 Traceback (most recent call last):
 TypeError: float_string must be an integer
 
 with a boolean in string format
 ===============================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("boolean_string", "True")
 Traceback (most recent call last):
 TypeError: boolean_string must be an integer
 
 with None as name
 =================
+>>> bg = BaseGeometry()
 >>> bg.integer_validator(None, 5)
