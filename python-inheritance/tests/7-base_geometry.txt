@@ -29,3 +29,9 @@ testing with a negativ number
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
+
+testing validator with a float
+::
+>>> bg.integer_validator("baptiste", 3.14)
+Traceback (most recent call last):
+TypeError: baptiste must be an integer
