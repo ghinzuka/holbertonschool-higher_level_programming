@@ -35,3 +35,9 @@ testing validator with a float
 >>> bg.integer_validator("baptiste", 3.14)
 Traceback (most recent call last):
 TypeError: baptiste must be an integer
+
+testing validator with a dictionnary
+::
+>>> bg.integer_validator("baptiste", {cestmoi, cestlui})
+Traceback (most recent call last):
+NameError: name 'cestmoi' is not defined
