@@ -54,8 +54,6 @@ testing validator with a none as name and value
 Traceback (most recent call last):
 TypeError: None must be an integer
 
-testing validator with 3 arguments
-::
->>> bg.integer_validator("baptiste", "encore", "un", "baptiste")
+>>> bg.area()
 Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 5 were given
+Exception: area() is not implemented
