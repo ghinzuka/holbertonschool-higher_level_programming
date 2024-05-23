@@ -3,6 +3,7 @@
 
 
 from abc import ABC, abstractmethod
+from task_01_duck_typing import Shape
 
 
 class Shape(ABC):
@@ -19,16 +20,16 @@ class Shape(ABC):
 
 
 class Circle(Shape):
-    """class circle from shape"""
+    """A class representing a circle, derived from the Shape class."""
     def __init__(self, radius):
         self.radius = radius
 
     def area(self):
-        """area of circle using pi to the suare of radius"""
+        """Calculate the area of the circle."""
         return (3.141592653589793 * (self.radius ** 2))
 
     def perimeter(self):
-        """caclulating perimeter using pi and radius"""
+        """Calculate the perimeter of the circle."""
         return (2 * 3.141592653589793 * self.radius)
 
 
