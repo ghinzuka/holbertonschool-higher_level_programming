@@ -3,7 +3,6 @@
 
 
 from abc import ABC, abstractmethod
-from task_01_duck_typing import Shape
 
 
 class Shape(ABC):
