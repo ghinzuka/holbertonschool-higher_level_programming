@@ -26,11 +26,11 @@ class Circle(Shape):
 
     def area(self):
         """Calculate the area of the circle."""
-        return (math.pi * (self.radius ** 2))
+        return abs(math.pi * (self.radius ** 2))
 
     def perimeter(self):
         """Calculate the perimeter of the circle."""
-        return (2 * math.pi * self.radius)
+        return abs(2 * math.pi * self.radius)
 
 
 class Rectangle(Shape):
@@ -50,8 +50,5 @@ class Rectangle(Shape):
 
 def shape_info(Shape):
     """shape method for duck typing"""
-    try:
-        print(f"Area: {Shape.area()}")
-        print(f"Perimeter: {Shape.perimeter()}")
-    except AttributeError as e:
-        print(f"Error: {e}")
+    print(f"Area: {Shape.area()}")
+    print(f"Perimeter: {Shape.perimeter()}")
