@@ -50,5 +50,8 @@ class Rectangle(Shape):
 
 def shape_info(Shape):
     """shape method for duck typing"""
-    print(f"Area: {Shape.area()}")
-    print(f"Perimeter: {Shape.perimeter()}")
+    try:
+        print(f"Area: {Shape.area()}")
+        print(f"Perimeter: {Shape.perimeter()}")
+    except AttributeError as e:
+        print(f"Error: {e}")
