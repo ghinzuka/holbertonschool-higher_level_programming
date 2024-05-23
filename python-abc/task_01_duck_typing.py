@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """class shape with abstract method area and perimeter"""
 
 
