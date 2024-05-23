@@ -25,11 +25,11 @@ class Circle(Shape):
 
     def area(self):
         """area of circle using pi to the suare of radius"""
-        return 3.141592653589793 * (self.radius ** 2)
+        return (3.141592653589793 * (self.radius ** 2))
 
     def perimeter(self):
         """caclulating perimeter using pi and radius"""
-        return 2 * 3.141592653589793 * self.radius
+        return (2 * 3.141592653589793 * self.radius)
 
 
 class Rectangle(Shape):
@@ -40,13 +40,14 @@ class Rectangle(Shape):
 
     def area(self):
         """return area using widht and height from init"""
-        return self.width * self.height
+        return (self.width * self.height)
 
     def perimeter(self):
         """return perimeter adding widht and height by two"""
-        return 2 * (self.width + self.height)
+        return (2 * (self.width + self.height))
 
 
-def shape_info(shape):
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+def shape_info(Shape):
+    """shape method for duck typing"""
+    print(f"Area: {Shape.area()}")
+    print(f"Perimeter: {Shape.perimeter()}")
