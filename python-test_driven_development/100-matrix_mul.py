@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""function tha multplicate a matrix by another matrix
+or matrix multiplication, the number of columns in the first
+matrix must be equal to the number of rows in the second matrix.
+"""
 
 
 def matrix_mul(m_a, m_b):
