@@ -18,55 +18,74 @@ array([[2]])
 # Error cases
 >>> lazy_matrix_mul(1, [[1, 2], [3, 4]])
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([[1, 2], [3, 4]], 1)
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([1, 2], [[1, 2], [3, 4]])
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [1, 2])
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([], [[1, 2], [3, 4]])
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [])
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([[1, 2], [3, '4']], [[1, 2], [3, 4]])
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, '4']])
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([[1, 2], [3, 4, 5]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4, 5]])
 Traceback (most recent call last):
-    ...
 ValueError: setting an array element with a sequence.
 
 >>> lazy_matrix_mul([[1, 2]], [[3, 4]])
 Traceback (most recent call last):
-    ...
 ValueError: shapes (1,2) and (1,2) not aligned: 2 (dim 1) != 1 (dim 0)
+
+Test_0 None as first argument
+-----------------------------
+>>> lazy_matrix_mul(None, [[1, 2, 3], [2, 3, 4]])
+Traceback (most recent call last):
+TypeError: m_a is not a list
+
+Test_1 None as second argument
+------------------------------
+>>> lazy_matrix_mul([[1, 2, 3], [2, 3, 4]], None)
+Traceback (most recent call last):
+TypeError: m_b is not a list
+
+Test_2 both first and second arguments as None
+----------------------------------------------
+>>> lazy_matrix_mul(None, None)
+Traceback (most recent call last):
+TypeError: m_a is not a list
+
+Test_3 missing 1 argument
+-------------------------
+    >>> lazy_matrix_mul([[1, 2, 3], [1, 2, 3]])
+    Traceback (most recent call last):
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+Test_4 missing 2 arguments
+--------------------------
+    >>> print(lazy_matrix_mul())
+    Traceback (most recent call last):
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
