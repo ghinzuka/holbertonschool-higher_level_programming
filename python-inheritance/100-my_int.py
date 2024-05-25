@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+a custom class to invert == and =!
+"""
 class MyInt(int):
     """A custom integer class that overrides the equality operators."""
 
