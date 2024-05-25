@@ -74,10 +74,10 @@ that are not integers or floats.
     for i in range(len(m_a)):
         result_row = []
         for j in range(len(m_b[0])):
-            celementl_sum = 0
+            cell_sum = 0
             for k in range(row_size_a):
-                celementl_sum += m_a[i][k] * m_b[k][j]
-            result_row.append(celementl_sum)
+                cell_sum += m_a[i][k] * m_b[k][j]
+            result_row.append(cell_sum)
         result.append(result_row)
 
     return result
