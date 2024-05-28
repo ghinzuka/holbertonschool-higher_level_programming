@@ -3,7 +3,6 @@
 
 import csv
 import json
-import autopep8
 
 
 def convert_csv_to_json(csv_filename):
