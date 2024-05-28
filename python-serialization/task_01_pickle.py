@@ -1,38 +1,39 @@
 #!/usr/bin/python3
-"""function that returns the dictionary description"""
-
+"""Module for CustomObject class with serialization and deserialization."""
 
 import pickle
 
 
 class CustomObject:
-    """CustomObject class"""
+    """CustomObject class with name, age, and is_student attributes."""
 
     def __init__(self, name, age, is_student):
-        """initialize the object attributes"""
+        """Initialize the object attributes."""
         self.name = name
         self.age = age
         self.is_student = is_student
 
     def display(self):
-        """display the object attributes"""
+        """Display the object attributes."""
         print("Name: {}".format(self.name))
         print("Age: {}".format(self.age))
         print("Is Student: {}".format(self.is_student))
 
     def serialize(self, filename):
-        """serialize the object"""
+        """Serialize the object to a file."""
         try:
             with open(filename, 'wb') as file:
                 pickle.dump(self, file)
-        except (pickle.PicklingError, FileNotFoundError):
+        except (pickle.PicklingError, FileNotFoundError) as e:
+            print(f"Error serializing object: {e}")
             return None
 
     @classmethod
     def deserialize(cls, filename):
-        """deserialize the object"""
+        """Deserialize an object from a file."""
         try:
             with open(filename, 'rb') as file:
                 return pickle.load(file)
-        except (pickle.UnpicklingError, FileNotFoundError):
+        except (pickle.UnpicklingError, FileNotFoundError) as e:
+            print(f"Error deserializing object: {e}")
             return None
