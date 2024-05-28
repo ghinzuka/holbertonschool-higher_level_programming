@@ -18,7 +18,7 @@ class CustomObject:
         """display the object attributes"""
         print("Name: {}".format(self.name))
         print("Age: {}".format(self.age))
-        print("Is_student: {}".format(self.is_student))
+        print("Is student: {}".format(self.is_student))
 
     def serialize(self, filename):
         """serialize the object"""
