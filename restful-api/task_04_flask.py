@@ -30,4 +30,15 @@ def user(username):
 	if user:
 		return jsonify(user)
 
+@app.route("/add_user", methods=["POST"])
+def add_user():
+    new_user = request.get_json()
+    username = new_user.get("username")
+    users[username] = {
+        "name": new_user.get("name"),
+        "age": new_user.get("age"),
+        "city": new_user.get("city")
+    }
+    return jsonify({"message": "User added", "user": users[username]})
+
 if __name__ == "__main__": app.run()
