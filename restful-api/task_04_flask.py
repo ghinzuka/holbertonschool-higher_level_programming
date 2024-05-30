@@ -28,6 +28,7 @@ def status():
 def user(username):
 	user = users.get(username)
 	if user:
+		user["username"] = username
 		return jsonify(user)
 
 @app.route("/add_user", methods=["POST"])
