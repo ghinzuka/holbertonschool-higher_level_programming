@@ -4,9 +4,8 @@ from flask import jsonify
 from flask import request
 
 users = {
-    "Baptiste": {"name": "Baptiste", "age": 32, "city": "ayguemorte_les_graves"},
-    "Nicolas": {"name": "Nicolas", "age": 28, "city": "Bordeaux"},
-    "Matthieu": {"name": "Matthieu", "age": 26, "city": "Saint_denis_de_pile"},
+    "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
+    "john": {"username": "john", "name": "John", "age": 30, "city": "New York"},
 }
 
 
@@ -30,16 +29,25 @@ def user(username):
 	if user:
 		user["username"] = username
 		return jsonify(user)
+	else:
+		return jsonify({"error": "User not found"}), 404
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
     new_user = request.get_json()
+    if not new_user:
+        return jsonify({"error": "Invalid JSON data"}), 400
     username = new_user.get("username")
-    users[username] = {
-        "name": new_user.get("name"),
-        "age": new_user.get("age"),
-        "city": new_user.get("city")
-    }
-    return jsonify({"message": "User added", "user": users[username]})
+    if username in users:
+        return jsonify({"error": "Username already exists"}), 409
+    try:
+        users[username] = {
+            "name": new_user.get("name"),
+            "age": new_user.get("age"),
+            "city": new_user.get("city")
+        }
+        return jsonify({"message": "User added", "user": users[username]}), 201
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__": app.run()
