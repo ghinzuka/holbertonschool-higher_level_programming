@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity, verify_jwt_in_request
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ app.config['JWT_SECRET_KEY'] = 'supersecretjwtkey'
 auth = HTTPBasicAuth()
 jwt = JWTManager(app)
 
-# Sample users dictionary
+# Sample users dictionary with hashed passwords
 users = {
     "user1": {"username": "user1", "password": generate_password_hash("password1"), "role": "user"},
     "admin1": {"username": "admin1", "password": generate_password_hash("password2"), "role": "admin"}
@@ -48,6 +48,17 @@ def login():
 def jwt_protected_route():
     current_user = get_jwt_identity()
     return jsonify(logged_in_as=current_user), 200
+
+@app.route('/admin-only')
+def admin_only_route():
+    try:
+        verify_jwt_in_request()
+        current_user = get_jwt_identity()
+        if current_user['role'] != 'admin':
+            return jsonify({"message": "You do not have access to this route."}), 401
+        return jsonify({"message": f"Hello, {current_user['username']}! This is an admin-only route."})
+    except:
+        return jsonify({"message": "JWT token missing or invalid."}), 401
 
 if __name__ == '__main__':
     app.run(debug=True)
