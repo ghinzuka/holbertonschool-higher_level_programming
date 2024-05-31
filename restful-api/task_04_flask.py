@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-from flask import Flask
-from flask import jsonify
-from flask import request
+from flask import Flask, jsonify, request
+
 
 
 app = Flask(__name__)
@@ -86,11 +85,7 @@ def add_user():
     if username in users:
         return jsonify({"error": "Username already exists"}), 409
     try:
-        users[username] = {
-            "name": new_user.get("name"),
-            "age": new_user.get("age"),
-            "city": new_user.get("city")
-        }
+        users[username] = new_user
         return jsonify({"message": "User added", "user": users[username]}), 201
     except Exception as e:
         return jsonify({"error": str(e)}), 500
