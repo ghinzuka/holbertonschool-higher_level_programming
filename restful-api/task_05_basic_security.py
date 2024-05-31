@@ -4,7 +4,6 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'supersecretkey'
 app.config['JWT_SECRET_KEY'] = 'supersecretjwtkey'
 
 auth = HTTPBasicAuth()
@@ -25,10 +24,6 @@ def verify_password(username, password):
 @auth.error_handler
 def auth_error(status):
     return '', 401
-
-@app.route('/')
-def public_route():
-    return "This is a public route."
 
 @app.route('/basic-protected')
 @auth.login_required
