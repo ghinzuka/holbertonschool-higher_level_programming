@@ -3,13 +3,14 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 
+
+app = Flask(__name__)
+
 users = {
     "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
     "john": {"username": "john", "name": "John", "age": 30, "city": "New York"},
 }
 
-
-app = Flask(__name__)
 @app.route("/")
 def home():
     return "Welcome to the Flask API!"
