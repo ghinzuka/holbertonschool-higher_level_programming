@@ -1,9 +1,12 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
 from flask import Flask, jsonify, request
+
+
 
 app = Flask(__name__)
 
 users = {}
+
 
 @app.route("/")
 def home():
@@ -11,17 +14,19 @@ def home():
     This function handles the root route of the Flask API.
 
     Returns:
-        str: A welcome message for the Flask API.
+            str: A welcome message for the Flask API.
     """
     return "Welcome to the Flask API!"
 
+
 @app.route("/data")
-def get_data():
+def data():
     """
-    Retrieves and returns the data from the 'users' dictionary as a JSON response.
+    Retrieve a list of usernames from the 'users'
+    dictionary and return it as a JSON response.
 
     Returns:
-        A JSON response containing the list of keys from the 'users' dictionary.
+            A JSON response containing a list of usernames.
     """
     return jsonify(list(users.keys()))
 
@@ -32,22 +37,24 @@ def status():
     Returns the status of the API.
 
     Returns:
-        str: The status message "OK".
+            str: The status message "OK".
     """
     return "OK"
 
 
 @app.route("/users/<username>")
-def get_user(username):
+def user(username):
     """
     Retrieve user information based on the provided username.
 
     Args:
-        username (str): The username of the user to retrieve.
+            username: The username of the user to retrieve information for.
 
     Returns:
-        If the user is found, returns a JSON response containing the user information.
-        If the user is not found, returns a JSON response with an error message and a 404 status code.
+            If the user is found, the user information
+            is returned as a JSON response.
+            If the user is not found, a JSON response with an
+            error message and a 404 status code is returned.
     """
     user = users.get(username)
     if user:
@@ -55,21 +62,30 @@ def get_user(username):
     else:
         return jsonify({"error": "User not found"}), 404
 
+
 @app.route("/add_user", methods=["POST"])
 def add_user():
     """
     Add a new user to the system.
 
     Returns:
-        A JSON response containing a success message and the user data if the user is added successfully.
-        A JSON response containing an error message if the username is missing.
+            A JSON response with the following structure:
+            - If the JSON data is invalid: {"error": "Invalid JSON data"}
+            - If the username already exists:
+            {"error": "Username already exists"}
+            - If the user is successfully added:
+            {"message": "User added", "user": <user_data>}
+            - If an exception occurs: {"error": <exception_message>}
     """
-    user_data = request.get_json()
-    username = user_data.get("username")
+    new_user = request.get_json()
+    username = new_user.get("username")
     if not username:
-        return jsonify({"error": "Username is required"}), 400
-    users[username] = user_data
-    return jsonify({"message": "User added", "user": user_data}), 201
+        return jsonify({"error": "username is required"}), 400
+    if username in users:
+        return jsonify({"error": "Username already exists"}), 409
+    users[username] = new_user
+    return jsonify({"message": "User added", "user": users[username]}), 201
+
 
 if __name__ == "__main__":
     app.run()
