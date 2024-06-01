@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
 from flask_jwt_extended import (JWTManager, create_access_token,
@@ -59,7 +61,7 @@ def jwt_protected_route():
 
 @app.route('/admin-only')
 @jwt_required()
-def admin_only_route():
+def admin_only():
     current_user = get_jwt_identity()
     if current_user['role'] != 'admin':
         return "You do not have access to this route.", 403
