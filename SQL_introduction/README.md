@@ -1,6 +1,9 @@
 # SQL - Introduction
+![image](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/d928c8a6-175a-46c5-a369-e2cff4dbccc0)
 
-![Project badge](path/to/project-badge-image)
+![image](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/68ea7090-4c9c-41dc-ac09-4857ef019749)
+
+
 
 **Level:** Novice  
 **Author:** Guillaume  
