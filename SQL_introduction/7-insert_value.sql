@@ -1,2 +1,3 @@
--- Write a script that deletes the database hbtn_0c_0 in your MySQL server.
--- 2. Delete a database
+-- Write a script that inserts a new row in the table first_table (database hbtn_0c_0) in your MySQL server.
+-- 7. First add
+INSERT INTO first_table (id, name) VALUES (89, 'Best School');
