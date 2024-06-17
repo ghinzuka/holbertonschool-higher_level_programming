@@ -1,2 +1,3 @@
--- Write a script that deletes the database hbtn_0c_0 in your MySQL server.
--- 2. Delete a database
+-- Write a script that displays the number of records with id = 89 in the table first_table of the database hbtn_0c_0 in your MySQL server.
+-- 8. Count 89
+SELECT COUNT(id) FROM first_table WHERE id = 89;
