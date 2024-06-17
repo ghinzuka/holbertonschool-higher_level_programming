@@ -62,7 +62,7 @@ $ cat my_script.sql
 -- because Batch 3 is the best!
 SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
 $
-
+```
 
 # MySQL Scripts
 
@@ -82,3 +82,4 @@ information_schema
 mysql
 performance_schema
 sys
+```
