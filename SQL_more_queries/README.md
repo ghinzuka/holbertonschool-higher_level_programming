@@ -4,6 +4,7 @@
 **Weight:** 1  
 **Migrated to checker v2:** Your score will be updated as you progress.  
 **Manual QA review must be done (request it when you are done with the project)**
+****![image](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/ed2ad640-6504-4bbf-bbdc-d9f4f11ffa63)
 
 ## Resources
 Read or watch:
@@ -128,3 +129,4 @@ id  name
 8   Thriller
 $
 ```
+![image](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/aead81d2-ef0e-45df-945d-6c0748fb6b0f)
