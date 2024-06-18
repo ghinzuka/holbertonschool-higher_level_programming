@@ -1,2 +1,4 @@
--- 3 first students in the Batch ID=3
--- because Batch 3 is the best!
+-- Write a script that lists all privileges of the MySQL users user_0d_1 and user_0d_2 on your server (in localhost).
+-- 0. My privileges!
+SHOW GRANTS FOR user_0d_1@localhost;
+SHOW GRANTS FOR user_0d_2@localhost;
