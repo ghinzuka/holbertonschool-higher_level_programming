@@ -1,6 +1,7 @@
 # Python - Inheritance
 
-![Project Badge](badge-url)
+![1_xDlvgqeFbq_OHmR0WQH9bw](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/35f6fc03-d2af-4c79-b61e-3088cf7948e3)
+
 
 **Completion:** 100%
 
