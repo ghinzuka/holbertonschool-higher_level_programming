@@ -1,6 +1,7 @@
 # Project badge
 
-![Project Badge](badge-url)
+![1_kqnlt_kAVnSEDVpSwUVE9Q](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/e502d3ef-f868-434a-b7aa-556aa05bed91)
+
 
 **Completion:** 100%
 
@@ -17,7 +18,7 @@
 Your score will be updated as you progress.  
 Manual QA review must be done (request it when you are done with the project)
 
-AUTHOR : BAPTSITE POUQUEROU 
+AUTHOR : BAPTISTE POUQUEROU 
 
 ## Introduction
 
@@ -60,4 +61,4 @@ This project will equip you with the skills needed to manipulate and manage data
 | 3           | Serializing and Deserializing with XML        | Explore serialization and deserialization using XML as an alternative format to JSON.                                                                                                                                  |
 | 4           | Client-Server Application with Serialization  | Understand how serialization is used in network communication to transmit data between different systems, implemented with client-server architecture using Python.                                                     |
 
-AUTHOR : BAPTSITE POUQUEROU 
+AUTHOR : BAPTISTE POUQUEROU 
