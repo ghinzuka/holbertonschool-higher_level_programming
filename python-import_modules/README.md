@@ -1,6 +1,7 @@
 # Python - import & modules
 
-![Project Badge](badge-url)
+![image](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/d09a912b-2a72-49fc-871f-cd6cf1562e87)
+
 
 **Completion:** 100%
 
