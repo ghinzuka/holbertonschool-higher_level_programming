@@ -1,6 +1,5 @@
 # Python - Exceptions
-
-![Project Badge](badge-url)
+<img width="621" alt="Exception and error handling in Python" src="https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/595c6cd3-1f35-4454-bca3-6588249343ac">
 
 **Completion:** 100%
 
