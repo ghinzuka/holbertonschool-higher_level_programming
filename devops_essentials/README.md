@@ -1,6 +1,6 @@
 # Project Badge
 
-![Project Badge](badge-url)
+![download](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/d0d7fb5a-6479-4f0f-9947-dc14a72c9772)
 
 **Completion:** 100%
 
@@ -15,6 +15,8 @@
 **Migrated to checker v2:** 
 
 Manual QA review was done by Matthieu Grauleau on Jun 11, 2024 3:55 PM
+
+AUTHOR : BAPTISTE POUQUEROU
 
 ## Description
 
