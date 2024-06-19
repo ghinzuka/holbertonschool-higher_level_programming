@@ -1,6 +1,7 @@
 # Python - Hello, World
 
-![Project Badge](badge-url)
+
+![kdedy7bsu2s71](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/ba9f318a-9b38-4883-80b2-7a7fd254af19)
 
 **Completion:** 100%
 
