@@ -1,6 +1,7 @@
 # Project badge
 
-![Project Badge](badge-url)
+![image](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/71fa476e-4c87-45ce-8e14-bbafa8955359)
+
 
 **Completion:** 100%
 
