@@ -1,6 +1,5 @@
-# Project badge
+![python_input_and_output](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/0a0d5302-f8c9-40b6-bc64-9c9ec7d7e2f3)
 
-![Project Badge](badge-url)
 
 **Completion:** 100%
 
