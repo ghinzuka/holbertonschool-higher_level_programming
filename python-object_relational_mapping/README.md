@@ -80,6 +80,8 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 ---
 
+AUTHORS : BAPTISTE POUQUEROU
+
 ## Requirements
 ### General
 - Allowed editors: vi, vim, emacs
@@ -149,6 +151,8 @@ $ python3
 >>> sqlalchemy.__version__ 
 '1.4.22'
 ```
+AUTHORS : BAPTISTE POUQUEROU
+
 | Task Number | Task Title                  | Description                                                                                                                                                                                                           |
 |-------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0           | Get all states              | Write a script that lists all states from the database hbtn_0e_0_usa, sorted by states.id.                                                                                                                             |
