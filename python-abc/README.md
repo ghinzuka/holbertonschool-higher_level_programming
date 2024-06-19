@@ -1,6 +1,6 @@
 # Python - Abstract Classes and Interfaces
 
-![Project Badge](badge-url)
+![abstract-class-vs-interface](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/41964e77-f4cc-4ed5-a656-1bc0694b5108)
 
 **Completion:** 100%
 
@@ -148,3 +148,4 @@ The above resources provide a mix of reading material, interactive exercises, an
   dragon.fly()   # Expected Output: "The creature flies!"
   dragon.roar()   # Expected Output: "The dragon roars!"
 	```
+AUTHOR : BAPTISTE POUQUEROU
