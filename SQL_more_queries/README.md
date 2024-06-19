@@ -149,3 +149,7 @@ $
 | 13          | Restore                     | Write a script that restores the database `db_0d_2` from a backup.                                                                                                                                                   |
 | 14          | Script execution            | Write a script that runs an SQL script passed as an argument to the script.                                                                                                                                          |
 | 15          | Setup replication           | Write a script that sets up MySQL replication between a master and a slave server.                                                                                                                                   |
+
+
+
+AUTHOR : BAPTISTE POUQUEROU
