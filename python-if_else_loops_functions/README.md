@@ -1,6 +1,6 @@
 # Python - if/else, loops, functions
 
-![Project Badge](badge-url)
+![image](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/2da5114d-8374-4caf-9834-54606e4cbacb)
 
 **Completion:** 100%
 
