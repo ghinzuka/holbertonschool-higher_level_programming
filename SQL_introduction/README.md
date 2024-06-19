@@ -85,60 +85,24 @@ mysql
 performance_schema
 sys
 ```
-## 1. Create a database
-
-**mandatory**
-
-Write a script that creates the database `hbtn_0c_0` in your MySQL server.
-
-If the database `hbtn_0c_0` already exists, your script should not fail
-
-You are not allowed to use the SELECT or SHOW statements
-
-```bash
-guillaume@ubuntu:~/$ cat 1-create_database_if_missing.sql | mysql -hlocalhost -uroot -p
-Enter password: 
-guillaume@ubuntu:~/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
-Enter password: 
-Database
-information_schema
-hbtn_0c_0
-mysql
-performance_schema
-guillaume@ubuntu:~/$ cat 1-create_database_if_missing.sql | mysql -hlocalhost -uroot -p
-Enter password: 
-guillaume@ubuntu:~/$ 
-```
-
-## 2. Delete a database
-
-**mandatory**
-
-Write a script that deletes the database `hbtn_0c_0` in your MySQL server.
-
-If the database `hbtn_0c_0` doesn’t exist, your script should not fail
-
-You are not allowed to use the SELECT or SHOW statements
-
-```bash
-guillaume@ubuntu:~/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
-Enter password: 
-Database                                                                                     
-hbtn_0c_0                                                                                    
-information_schema                                                                           
-mysql                                                                                        
-performance_schema                                                                           
-sys        
-guillaume@ubuntu:~/$ cat 2-remove_database.sql | mysql -hlocalhost -uroot -p
-Enter password: 
-guillaume@ubuntu:~/$ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
-Enter password: 
-Database                                                                                                                                                                  
-information_schema                                                                           
-mysql                                                                                        
-performance_schema                                                                           
-sys        
-guillaume@ubuntu:~/$ 
-```
+| Task Number | Task Title               | Description                                                                                                                                                                                                                          |
+|-------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0           | List databases           | Write a script that lists all databases of your MySQL server.                                                                                                                                                                        |
+| 1           | Create a database        | Write a script that creates the database hbtn_0c_0 in your MySQL server. If the database hbtn_0c_0 already exists, your script should not fail.                                                                                   |
+| 2           | Delete a database        | Write a script that deletes the database hbtn_0c_0 in your MySQL server. If the database hbtn_0c_0 doesn’t exist, your script should not fail.                                                                                     |
+| 3           | List tables              | Write a script that lists all the tables of a database in your MySQL server.                                                                                                                                                         |
+| 4           | First table              | Write a script that creates a table called first_table in the current database in your MySQL server. If the table first_table already exists, your script should not fail.                                                           |
+| 5           | Full description         | Write a script that prints the full table description of the table first_table from the database hbtn_0c_0 in your MySQL server.                                                                                                    |
+| 6           | List all in table        | Write a script that lists all rows of the table first_table from the database hbtn_0c_0 in your MySQL server.                                                                                                                        |
+| 7           | First add                | Write a script that inserts a new row in the table first_table (database hbtn_0c_0) in your MySQL server.                                                                                                                             |
+| 8           | Count 89                 | Write a script that displays the number of records with id = 89 in the table first_table of the database hbtn_0c_0 in your MySQL server.                                                                                             |
+| 9           | Full creation            | Write a script that creates a table second_table in the database hbtn_0c_0 in your MySQL server and adds multiple rows.                                                                                                              |
+| 10          | List by best             | Write a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server, ordered by score (top first).                                                                                       |
+| 11          | Select the best          | Write a script that lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0 in your MySQL server, ordered by score (top first).                                                                    |
+| 12          | Cheating is bad          | Write a script that updates the score of Bob to 10 in the table second_table without using Bob’s id value, only the name field.                                                                                                      |
+| 13          | Score too low            | Write a script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.                                                                                                   |
+| 14          | Average                  | Write a script that computes the score average of all records in the table second_table of the database hbtn_0c_0 in your MySQL server.                                                                                             |
+| 15          | Number by score          | Write a script that lists the number of records with the same score in the table second_table of the database hbtn_0c_0 in your MySQL server, sorted by the number of records (descending).                                        |
+| 16          | Say my name              | Write a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server, excluding rows without a name value, ordered by descending score.                                               |
 
 AUTHOR : BAPTISTE POUQUEROU
