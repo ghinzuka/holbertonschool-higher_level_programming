@@ -166,3 +166,5 @@ $ python3
 | 12          | Update a state              | Write a script that changes the name of a State object in the database hbtn_0e_6_usa from "Arizona" to "New Mexico".                                                                                                  |
 | 13          | Delete states               | Write a script that deletes all State objects from the database hbtn_0e_6_usa that contain the letter 'a' in their name.                                                                                              |
 | 14          | Cities in state             | Define a City class using SQLAlchemy and create a corresponding table in hbtn_0e_14_usa database. Write a script that prints all City objects from the database hbtn_0e_14_usa, displaying them by state name and sorted by city id. |
+
+AUTHORS : BAPTISTE POUQUEROU
