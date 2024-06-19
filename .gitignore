@@ -1,0 +1,23 @@
+# Fichiers bytecode Python
+*.pyc
+*.pyo
+
+# Dossiers __pycache__
+__pycache__/
+
+# Fichiers créés par le système d'exploitation
+.DS_Store
+
+# Fichiers de logs
+*.log
+
+# Fichiers de sauvegarde
+*~
+
+# Dossiers et fichiers générés par IDEs
+.idea/
+.vscode/
+
+# Dossiers spécifiques à certains outils Python
+venv/
+env/
