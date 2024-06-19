@@ -1,6 +1,7 @@
 # Project Badge
 
-![download](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/d0d7fb5a-6479-4f0f-9947-dc14a72c9772)
+![1_F129jhUzgHaAPxsQrbT8qA](https://github.com/ghinzuka/holbertonschool-higher_level_programming/assets/102736316/429ef2bc-ff5c-4d3c-bc61-386a54ed2f55)
+
 
 **Completion:** 100%
 
