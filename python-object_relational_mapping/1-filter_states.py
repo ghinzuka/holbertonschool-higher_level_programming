@@ -3,6 +3,10 @@
 Connects to a MySQL database and selects all
 states with a name starting with 'N'
 from the 'states' table.
+Args:
+username (str): The username for the MySQL database.
+password (str): The password for the MySQL database.
+database (str): The name of the MySQL database.
 """
 if __name__ == "__main__":
     import sys
