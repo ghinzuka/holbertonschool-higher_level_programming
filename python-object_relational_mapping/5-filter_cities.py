@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Write a script that takes in the name of a state as an argument and lists 
+Write a script that takes in the name of a state as an argument and lists
 all cities of that state, using the database hbtn_0e_4_usa
 Args:
 username (str): The username for the MySQL database.
@@ -26,14 +26,14 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     select = """
-    SELECT cities.name FROM cities 
+    SELECT cities.name FROM cities
     INNER JOIN states ON cities.state_id = states.id
     WHERE states.name = %s
     ORDER BY cities.id ASC
     """
     cursor.execute(select, (state_name,))
     cities = cursor.fetchall()
-    
+
     city_names = [city[0] for city in cities]
     print(", ".join(city_names))
 
