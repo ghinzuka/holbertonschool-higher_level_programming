@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 import sys
 import MySQLdb
+"""
+Connects to a MySQL database and selects all states from the 'states' table.
+
+Args:
+	username (str): The username for the MySQL database.
+	password (str): The password for the MySQL database.
+	database (str): The name of the MySQL database.
+	"""
 
 if __name__ == "__main__":
     username = sys.argv[1]
