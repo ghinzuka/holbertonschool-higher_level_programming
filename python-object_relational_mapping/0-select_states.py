@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import sys
-import MySQLdb
 """
 Connects to a MySQL database and selects all states from the 'states' table.
 
@@ -11,6 +9,8 @@ Args:
 	"""
 
 if __name__ == "__main__":
+    import sys
+    import MySQLdb
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
