@@ -40,8 +40,8 @@ if __name__ == "__main__":
 
     delete = session.query(State).filter(State.name.like('%a%')).all()
 
-    for state in delete:
-        session.delete(state)
+    for row in delete:
+        session.delete(row)
 
     session.commit()
     session.close()
