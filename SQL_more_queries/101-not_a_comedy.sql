@@ -12,7 +12,7 @@ WHERE id NOT IN (
 	WHERE tv_show_genres.genre_id = (
 		SELECT id
 		FROM tv_genres
-		WHERE name ='comedy'
+		WHERE name ='Comedy'
 	)
 )
 ORDER BY title ASC;
