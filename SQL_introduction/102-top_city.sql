@@ -4,6 +4,8 @@
 -- using the the AVG abregation tu get the average temp - 
 -- GROUP by the city so it knows from wich group of (values) it needs to do the AVG from - 
 -- order by the avg temp in descending order
+-- same structure but we havec to put the month 7 et 8 wich are july ang august 
+-- and set le limit at 3 to get the first 3 citites.
 SELECT
     city,
     AVG(value) AS avg_temp
