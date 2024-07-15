@@ -1,5 +1,7 @@
 # Server-Side Rendering with Python and Flask
 
+![1_Jsk5k8dg0ghnaEOT1nThdw](https://github.com/user-attachments/assets/7567457d-c2c2-4586-ad55-fe96038c63ca)
+
 Server-side rendering is a powerful technique where web pages are generated on the server and sent to the client as fully formed HTML. This contrasts with client-side rendering, where the browser builds the web page using JavaScript and dynamic data. Through this project, you will learn how to implement SSR using Python and Flask, leveraging the Jinja templating engine to create dynamic, efficient, and SEO-friendly web applications.
 
 ## Learning Objectives
