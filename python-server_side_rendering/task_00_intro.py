@@ -20,10 +20,10 @@ def generate_invitations(template, attendees):
     
     for x, attendee in enumerate(attendees, start=1):
         content = template
-        content = content.replace("{name}", attendee.get("name", "N/A"))
-        content = content.replace("{event_title}", attendee.get("event_title", "N/A"))
-        content = content.replace("{event_date}", attendee.get("event_date", "N/A"))
-        content = content.replace("{event_location}", attendee.get("event_location", "N/A"))
+        content = content.replace("{name}", attendee.get("name")if attendee.get("name") is not None else "N/A")
+        content = content.replace("{event_title}", attendee.get("event_title")if attendee.get("event_title") is not None else "N/A")
+        content = content.replace("{event_date}", attendee.get("event_date")if attendee.get("event_date") is not None else "N/A")
+        content = content.replace("{event_location}", attendee.get("event_location")if attendee.get("event_location") is not None else "N/A")
         
         output_file = f"output_{x}.txt"
         
