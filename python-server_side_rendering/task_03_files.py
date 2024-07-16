@@ -45,23 +45,20 @@ def read_csv():
 def display_products():
     source = request.args.get('source')
     product_id = request.args.get('id')
-    products = []
-    error = None
 
     if source == 'json':
         products = read_json()
     elif source == 'csv':
         products = read_csv()
     else:
-        error = "Wrong source"
+        return render_template('product_display.html', error="Wrong source")
     
     if product_id:
-        product_id = int(product_id)
-        products = [product for product in products if product['id'] == product_id]
+        products = [product for product in products if str(product['id']) == product_id]
         if not products:
-            error = "Product not found"
+            return render_template('product_display.html', error="Product not found")
 	
-    return render_template('product_display.html', products=products, error=error)
+    return render_template('product_display.html', products=products)
  
 if __name__ == '__main__':
 	app.run(debug=True, port=5000)
