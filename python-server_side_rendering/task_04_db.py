@@ -46,7 +46,7 @@ def read_db():
     products = []
     conn = sqlite3.connect('products.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT id, name, category, price FROM Products")
+    cursor.execute("SELECT * FROM Products")
     product = cursor.fetchall()
     conn.close()
     for row in product:
@@ -63,15 +63,19 @@ def display_products():
     source = request.args.get('source')
     product_id = request.args.get('id')
 
-    if source == 'json':
-        products = read_json()
-    elif source == 'csv':
-        products = read_csv()
-    elif source == 'db':
-        products = read_db()
-    else:
+    if source not in ['json', 'csv', 'sql']:
         return render_template('product_display.html', error="Wrong source")
-    
+
+    try:
+        if source == 'json':
+            products = read_json()
+        elif source == 'csv':
+            products = read_csv()
+        elif source == 'sql':
+            products = read_db()
+    except Exception as e:
+        return render_template('product_display.html', error=str(e))
+
     if product_id:
         products = [product for product in products if str(product['id']) == product_id]
         if not products:
