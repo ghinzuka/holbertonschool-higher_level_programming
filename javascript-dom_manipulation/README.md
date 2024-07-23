@@ -1,4 +1,5 @@
 # JavaScript DOM Manipulation
+![image](https://github.com/user-attachments/assets/4a66f3b1-101b-4e0e-b186-06e929282dca)
 
 **Novice**
 
